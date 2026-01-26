@@ -1,0 +1,26 @@
+-- !!! READ COMMENTS BEFORE CHANGING SETTINGS !!!
+getgenv().Config = {
+    LEVEL = 0, -- level farm until this level (0 = skip)
+    TWEEN_SPEED = 60, -- movement speed
+    FPS_CAP = 0, -- fps limit (0 = unlimited)
+    COLLECT_AFTER_AMOUNT = 30, -- collect gifts after this amount
+    MAIN_WEAPON = "Sword", -- main weapon type (Sword / Strength)
+    ALL_IN_STATS = true, -- reset stats and put all points into MAIN_WEAPON (doesn't work if acc in LURE)
+
+    PS_CODE = {
+        ["Public"] = {"Bot1", "Bot2", "Bot3"}, -- public servers
+        ["MwCUmVreLk"] = {"qazaqazcxzc11231", "Benz96X6", "Bot6"}, -- private server
+        ["PSCODE2"] = {"Bot7", "Bot8"} -- private server
+    },
+
+-- !!! IF YOU WANT YOUR ACCOUNT TO BE KILLER AND LURE AT THE SAME TIME, DO NOT ENTER ITS USERNAME BELOW !!!
+    KILLER = {"BOT1", "BOT2", "BOT3"}, -- kills only elves (no santa)
+    LURE = {"qazaqazcxzc11231", "Benz96X6", "BOT6"}, -- hits only santa
+
+    WEBHOOK_URL = "https://discord.com/api/webhooks/1077225544166428672/S-7aeqgipakKTMwQ9eaOMBIE9Z1Sv73pnwTfo29I5l-qiQM0485B-WYF9sepsQVDiVXa", -- discord webhook
+    PING_ON_LEGENDARY = true, -- ping on legendary drop
+    OPEN_ONLY_BLUE_GIFT = true, -- only open blue gifts
+    AUTO_LEAVE_WHEN_DROP_ICC = true -- auto leave after Iceborn Candy Cane
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e2f9b2d61702c96d1c770b73d7246441.lua"))()
